@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import MiniGame from "./MiniGame";
+
 
 // Pokémon overworld-inspired portfolio with authentic Pokkén-style grass background
 // Uses a soft retro palette with green tones and pixel textures similar to Pokémon routes.
@@ -226,6 +228,9 @@ export default function App() {
             <CardList items={data.awards} expandedIndex={expandedIndex} toggleExpand={toggleExpand} />
           </Section>
         )}
+          <div className="mt-10">
+            <MiniGame />
+          </div>
       </main>
     </div>
   );
