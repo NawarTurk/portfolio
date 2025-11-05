@@ -1,41 +1,38 @@
 import React, { useState } from "react";
 import MiniGame from "./MiniGame";
 
-
-// Pokémon overworld-inspired portfolio with authentic Pokkén-style grass background
-// Uses a soft retro palette with green tones and pixel textures similar to Pokémon routes.
-
 const data = {
   experience: [
     {
       role: "Research and Teaching Assistant",
       org: "Concordia University, Montreal, QC",
-      year: "Sep 2024 – Present",
+      year: "Sep 2024 - Present",
       image: "/images/concordia.png",
-      details: [
-        "Collaborated on NLP projects and presented at Canadian AI 2025 and SemEval 2025.",
-        "Supported 80+ students in programming and AI courses.",
-        "Mentored an undergraduate student toward their first publication.",
+      details:[
+        "Collaborated with the research team on NLP projects, designing and evaluating model architectures, presented findings at 2 international conferences (Canadian AI 2025, SemEval 2025), engaging with 100+ researchers",
+        "Supporting 80+ students in Object-Oriented Programming and AI courses by leading labs and tutorials, explaining complex concepts, designing additional quizzes and practice sets on GitHub, and assisting via Slack",
+        "Mentoring an undergraduate student toward their first publication, guiding model and research development"
       ],
     },
     {
       role: "Software Developer Intern",
       org: "Ross Video, Ottawa, ON",
-      year: "Jan 2023 – Dec 2023",
+      year: "Jan 2023 - Dec 2023",
       image: "/images/ross.png",
       details: [
-        "Developed backend features for Quorum using Java/Struts2.",
-        "Achieved 95%+ unit test coverage with JUnit and Mockito.",
-        "Created onboarding docs reducing ramp-up time by 50%.",
+        "Delivered new features for Quorum broadcasting software by implementing Shotbox system backend using Java/Struts2, achieving 95%+ test coverage with comprehensive JUnit/Mockito testing",
+        "Represented the Quorum development team at 4 company-wide Agile sprint demos, presenting new features to 40+ cross-functional stakeholders and addressing technical questions",
+        "Collaborated with development team members to streamline Quorum onboarding by creating structured documentation and training materials, reducing ramp-up time from 4 to 2 days for four new developers"
       ],
     },
     {
       role: "Engineering Assistant Intern",
       org: "Genesee & Wyoming Inc, Montreal, QC",
-      year: "Sep 2021 – Dec 2021",
+      year: "Sep 2021 - Dec 2021",
       image: "/images/gw.png",
       details: [
-        "Audited engineering standards and supported a $10M rail expansion project.",
+        "Improved engineering standards consistency by auditing multiple engineering standards documents, resolving conflicts, and unifying multiple sources into a single updated standard proposal for management",
+        "Supported a $10M rail expansion from the main line to a factory by evaluating 4 safety-compliant routes, preparing cost estimates, and delivering presentation materials for municipal stakeholders"
       ],
     },
   ],
@@ -43,20 +40,23 @@ const data = {
   volunteering: [
     {
       org: "Fondation Arbour",
-      role: "Ambassador",
-      year: "2025 – Present",
+      role: "Ambassador & Volunteer",
+      year: "2025 - Present",
       image: "/images/arbour.png",
       details: [
-        "Promoted scholarships and co-hosted events with 100+ attendees.",
-      ],
+        "Ambassador: Served as an Ambassador for the Arbour Foundation, leading outreach and support for scholarship applicants.",
+        "Organizer: Helped organize the “AI & Energy Transition” event with IVADO, and supported the 2025–2026 selection process by coordinating candidate reception and interview flow.",
+        "Community Builder: Founded and managed a LinkedIn group for Arbour Scholars to connect, share opportunities, and build a sense of community."
+       ],
+    
     },
     {
       org: "Santropol Roulant",
       role: "Meals-on-Wheels Volunteer",
-      year: "2024 – Present",
+      year: "2024 - Present",
       image: "/images/santropol.png",
       details: [
-        "Delivered meals to elderly residents and improved food security.",
+        "Volunteer with Santropol Roulant, preparing and delivering nutritious meals and human connection to homebound seniors in Montreal. Supporting seniors with limited autonomy, combating both food insecurity and social isolation",
       ],
     },
     {
@@ -65,90 +65,92 @@ const data = {
       year: "2024 – 2025",
       image: "/images/shuffle.png",
       details: [
-        "Supported $350k+ annual charity walk and managed registration/donations.",
+        "Volunteer for Concordia Shuffle, supporting annual charity walks that raised $300k+ for student scholarships. Assisted in logistics, including registration, merchandise, donations, and online promotion.",
+        "Returned as a volunteer for the second year, contributing to event logistics and student fundraising efforts."
       ],
     },
     {
       org: "Ross Video",
-      role: "Chess Club Founder",
+      role: "Chess Club Founder & Coordinator",
       year: "2023",
       image: "/images/chess.png",
-      details: [
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-        "Founded company chess club and connected 20+ employees.",
-      ],
+      details: ["Founded and managed Ross Video Chess Club with 10 bi-weekly competitions connecting 20+ employees across departments, fostering cross-team professional connections and networking",
+        "Contributed to organizing RossCon3 by managing 5 Zoom and in-person sessions, handling recordings, introducing speakers, coordinating signage, taking attendance, and troubleshooting technical issues"
+      ]
     },
     {
       org: "Concordia University",
       role: "Co-op Mentor",
-      year: "2022",
+      year: "2022-2023",
       image: "/images/mentor.png",
-      details: ["Guided students in finding and succeeding in their first internships."],
+      details: [
+        "Mentored junior co-op students through internship search and career preparation, providing interview coaching, résumé feedback, and time management guidance",
+        "Supported mentees in securing competitive internship placements while maintaining high GPAs, developing technical skills beyond the school curriculum, and balancing full-time coursework",
+        "Received the Co-op Mentorship Award in 2024 for exceptional guidance and student support"
+      ],
+    },
+    {
+      org: "Concordia University",
+      role: "Games Club executive",
+      year: "2020 - 2021",
+      image: "/images/executive.png",
+      details: [
+        "Collaborated with a 4-person leadership team to support first-year student engagement during COVID-19. Grew club social media to 1,000+ followers and organized 7 online gaming events, building community connections for remote students unable to attend campus"
+      ],
     },
   ],
 
   publications: [
     {
-      title: "HiDAC: Hierarchical Adapters for Cross-Framework Multilingual Discourse Relation Classification",
-      venue: "CODI–DISRPT @ EMNLP 2025",
+      title: "Hierarchical Adapters for Cross-Framework Multi-lingual Discourse Relation Classification",
+      venue: "Computational Approaches to Discourse (CODI) Workshop @ EMNLP 2025 · Sep 22, 2025",
+      link: "https://arxiv.org/abs/2509.16903", 
       image: "/images/hidac.png",
       details: [
-        "Introduced hierarchical adapters for discourse relation classification.",
+        "Our paper focuses on Discourse Relation Classification, where the DISRPT organizers did a wonderful job assembling 39 corpora across 16 languages and 6 discourse frameworks, and proposed a unified set of 17 relation labels",
+        "We built multilingual baselines using mBERT, XLM-RoBERTa-Base, and XLM-RoBERTa-Large for the newly proposed labels across all corpora. We then explored progressive unfreezing strategies and also evaluated prompt-based models (zero- and few-shot) using Claude Opus 4.0. Lastly, we proposed a hierarchical adapter and contrastive learning model that is efficient and aimed to outperform the baselines",
+        "Our findings show that while larger transformer models yield slightly better results, the gains are modest. Unfreezing the top 75% of encoder layers offers nearly the same accuracy as full fine-tuning, but with far fewer trainable parameters. Our proposed model surpassed the baselines while requiring far fewer parameters to train. The winning team achieved an accuracy of 71%, showing that there is still room for improvement"
       ],
     },
     {
-      title: "CLaC at SemEval-2025 Task 6",
-      venue: "SemEval 2025 Proceedings",
+      title: "A Multi-Architecture Approach for Corporate Environmental Promise Verification",
+      venue: "The 19th International Workshop on Semantic Evaluation (SemEval-2025) · Jul 1, 2025",
+      link: "https://aclanthology.org/2025.semeval-1.232/", 
       image: "/images/semeval.png",
       details: [
-        "Developed ensemble transformer models for corporate promise verification.",
+        "We proposed three transformer-based models for verifying ESG promises in corporate reports at SemEval-2025 Task 6. Models 1 and 2 (using ESG-BERT) handled all four subtasks, with Model 2 adding tailored features like sentiment, vague terms, and time indicators to guide the model. Model 3 (based on DeBERTa-v3) focused on Tasks 1 and 2 using attention pooling, document metadata, and multitask learning. Our final submission combined Model 3 for Tasks 1 and 2 with Model 2 for Tasks 3 and 4, outperforming the baseline on the private leaderboard",
       ],
     },
     {
       title: "On the Influence of Discourse Relations in Persuasive Texts",
-      venue: "Canadian AI 2025",
+      venue: "The 38th Canadian Conference on Artificial Intelligence (Canadian AI 2025) · May 19, 2025",
+      link: "https://caiac.pubpub.org/pub/p99aab5q/release/2", 
       image: "/images/canai.png",
       details: [
-        "Analyzed how discourse relations affect persuasion in online texts.",
+        "We explored how discourse relations relate to persuasion techniques in online texts. We used LLMs and prompt engineering to label a persuasion-annotated dataset with discourse relations from PDTB 3.0, evaluating four LLMs across ten prompts (40 classifiers total). We released five silver-standard datasets created through ensemble strategies. Our analysis revealed that relations like Cause, Purpose, and Concession are closely tied to persuasive techniques such as Loaded Language and Doubt, offering insights for misinformation detection and persuasive communication",
       ],
     },
   ],
 
   awards: [
     {
-      name: "FRQNT Scholarship",
+      name: "Fonds de recherche du Québec (FRQ) Scholarship, $20,000",
       year: "2025",
       image: "/images/frq.png",
-      details: ["Provincial merit-based research grant ($20,000)."],
+      details: ["provincial, merit-based; assessed on academic excellence, research potential, and overall presentation"],
     },
     {
-      name: "Arbour Scholarship",
+      name: "Fondation Arbour Scholarship, $40,000",
       year: "2024–2025",
       image: "/images/arbour.png",
-      details: ["Leadership and research scholarship ($40,000)."],
+      details: ["2024, sole Concordia recipient; renewed 2025", 
+        "provincial, merit-based; assessed on leadership skills, contributing to the community, research record and potential"],
     },
     {
-      name: "NSERC CGS-M",
+      name: "Natural Sciences and Engineering Research Council of Canada (NSERCCGS-M), $27,000",
       year: "2024",
       image: "/images/nserc.png",
-      details: ["Federal merit-based research award ($27,000)."],
+      details: ["national, merit-based; assessed on academic excellence, research potential, and personal/interpersonal skills"],
     },
     {
       name: "Co-op Mentorship Award",
@@ -258,9 +260,32 @@ function CardList({ items, expandedIndex, toggleExpand }) {
             <img src={item.image} alt={item.role || item.title || item.name} className="w-16 h-16 object-cover rounded-md border-2 border-green-700" />
           )}
           <div className="flex-1">
-            <p className="font-semibold text-green-900 text-sm mb-1">{item.role || item.title || item.name}</p>
-            {item.org && <p className="text-xs text-green-800">{item.org}</p>}
-            {item.year && <p className="text-[10px] text-green-700">{item.year}</p>}
+{/*             
+            <p className="font-semibold text-green-900 text-sm mb-1">
+              {item.role || item.title || item.name}
+            </p> */}
+
+            {item.link ? (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-green-900 text-sm mb-1 underline hover:text-green-700"
+              >
+                {item.title || item.role || item.name}
+              </a>
+            ) : (
+              <p className="font-semibold text-green-900 text-sm mb-1">
+                {item.title || item.role || item.name}
+              </p>
+            )}
+
+
+          {item.org && <p className="text-xs text-green-800">{item.org}</p>}
+          {item.venue && <p className="text-xs text-green-800 italic">{item.venue}</p>}
+          {item.year && <p className="text-[10px] text-green-700">{item.year}</p>}
+
+
             {expandedIndex === i && item.details && (
               <ul className="mt-2 text-[11px] text-green-900 list-disc list-inside">
                 {item.details.map((point, idx) => (
