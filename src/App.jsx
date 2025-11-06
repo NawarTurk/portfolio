@@ -184,9 +184,50 @@ export default function App() {
         className="w-28 h-28 rounded-full mb-3 border-4 border-green-700 shadow-md object-cover object-center"
       />
         <h1 className="text-lg font-bold mb-2 text-green-900 tracking-tight">Nawar Turk</h1>
-        <p className="text-xs text-green-800 text-center mb-5">MSc Computer Science | NLP Researcher</p>
+        <p className="text-xs text-green-800 text-center mb-2">MSc Computer Science <br/> NLP Researcher</p>
 
-        <nav className="w-full space-y-2">
+
+        <div className="flex justify-center gap-3 mt-4 mb-3">
+          <a
+            href="https://www.linkedin.com/in/nawart/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/linkedin.png"
+              alt="LinkedIn"
+              className="w-8 h-8 rounded-md bg-white p-1 border border-green-700 hover:scale-110 transition-transform duration-150"
+            />
+          </a>
+
+          <a
+            href="https://github.com/nawarturk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/github.png"
+              alt="GitHub"
+              className="w-8 h-8 rounded-md bg-white p-1 border border-green-700 hover:scale-110 transition-transform duration-150"
+            />
+          </a>
+
+          <a
+            href="https://scholar.google.com/citations?user=YOUR_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/googlescholar.png"
+              alt="Google Scholar"
+              className="w-8 h-8 rounded-md bg-white p-1 border border-green-700 hover:scale-110 transition-transform duration-150"
+            />
+          </a>
+        </div>
+
+
+
+      <nav className="w-full space-y-2 mt-6">
           {Object.keys(data).map((key) => (
             <button
               key={key}
@@ -204,6 +245,8 @@ export default function App() {
             </button>
           ))}
         </nav>
+
+
       </aside>
 
       <main className="flex-1 p-10 bg-[url('/images/grass-sky.jpg')] bg-no-repeat bg-cover bg-center bg-[length:80px_80px]">
