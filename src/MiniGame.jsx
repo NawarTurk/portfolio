@@ -12,7 +12,7 @@ export default function MiniGame() {
 
   const messages = [
     "Hi, welcome! Thank you for taking the time to check out my site. I really appreciate it.",
-    "I'm Nawar, an NLP researcher and master's student at Concordia University.",
+    "I'm Nawar, an graduate NLP researcher at Concordia University.",
     "I love exploring how language, AI, and human reasoning connect.",
     "I enjoy playing chess and discovering new cafés to code at.",
     "I'm working on research combining persuasion detection and discourse analysis.",

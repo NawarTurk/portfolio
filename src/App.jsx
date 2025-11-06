@@ -54,7 +54,7 @@ const data = {
       org: "Santropol Roulant",
       role: "Meals-on-Wheels Volunteer",
       year: "2024 - Present",
-      image: "/images/santropol.png",
+      image: "/images/santropool.png",
       details: [
         "Volunteer with Santropol Roulant, preparing and delivering nutritious meals and human connection to homebound seniors in Montreal. Supporting seniors with limited autonomy, combating both food insecurity and social isolation",
       ],
@@ -63,7 +63,7 @@ const data = {
       org: "Concordia University",
       role: "Shuffle Volunteer",
       year: "2024 – 2025",
-      image: "/images/shuffle.png",
+      image: "/images/concordia.png",
       details: [
         "Volunteer for Concordia Shuffle, supporting annual charity walks that raised $300k+ for student scholarships. Assisted in logistics, including registration, merchandise, donations, and online promotion.",
         "Returned as a volunteer for the second year, contributing to event logistics and student fundraising efforts."
@@ -73,7 +73,7 @@ const data = {
       org: "Ross Video",
       role: "Chess Club Founder & Coordinator",
       year: "2023",
-      image: "/images/chess.png",
+      image: "/images/ross.png",
       details: ["Founded and managed Ross Video Chess Club with 10 bi-weekly competitions connecting 20+ employees across departments, fostering cross-team professional connections and networking",
         "Contributed to organizing RossCon3 by managing 5 Zoom and in-person sessions, handling recordings, introducing speakers, coordinating signage, taking attendance, and troubleshooting technical issues"
       ]
@@ -82,7 +82,7 @@ const data = {
       org: "Concordia University",
       role: "Co-op Mentor",
       year: "2022-2023",
-      image: "/images/mentor.png",
+      image: "/images/concordia.png",
       details: [
         "Mentored junior co-op students through internship search and career preparation, providing interview coaching, résumé feedback, and time management guidance",
         "Supported mentees in securing competitive internship placements while maintaining high GPAs, developing technical skills beyond the school curriculum, and balancing full-time coursework",
@@ -93,7 +93,7 @@ const data = {
       org: "Concordia University",
       role: "Games Club executive",
       year: "2020 - 2021",
-      image: "/images/executive.png",
+      image: "/images/concordia.png",
       details: [
         "Collaborated with a 4-person leadership team to support first-year student engagement during COVID-19. Grew club social media to 1,000+ followers and organized 7 online gaming events, building community connections for remote students unable to attend campus"
       ],
@@ -105,7 +105,7 @@ const data = {
       title: "Hierarchical Adapters for Cross-Framework Multi-lingual Discourse Relation Classification",
       venue: "Computational Approaches to Discourse (CODI) Workshop @ EMNLP 2025 · Sep 22, 2025",
       link: "https://arxiv.org/abs/2509.16903", 
-      image: "/images/hidac.png",
+      // image: "/images/hidac.png",
       details: [
         "Our paper focuses on Discourse Relation Classification, where the DISRPT organizers did a wonderful job assembling 39 corpora across 16 languages and 6 discourse frameworks, and proposed a unified set of 17 relation labels",
         "We built multilingual baselines using mBERT, XLM-RoBERTa-Base, and XLM-RoBERTa-Large for the newly proposed labels across all corpora. We then explored progressive unfreezing strategies and also evaluated prompt-based models (zero- and few-shot) using Claude Opus 4.0. Lastly, we proposed a hierarchical adapter and contrastive learning model that is efficient and aimed to outperform the baselines",
@@ -116,7 +116,7 @@ const data = {
       title: "A Multi-Architecture Approach for Corporate Environmental Promise Verification",
       venue: "The 19th International Workshop on Semantic Evaluation (SemEval-2025) · Jul 1, 2025",
       link: "https://aclanthology.org/2025.semeval-1.232/", 
-      image: "/images/semeval.png",
+      // image: "/images/semeval.png",
       details: [
         "We proposed three transformer-based models for verifying ESG promises in corporate reports at SemEval-2025 Task 6. Models 1 and 2 (using ESG-BERT) handled all four subtasks, with Model 2 adding tailored features like sentiment, vague terms, and time indicators to guide the model. Model 3 (based on DeBERTa-v3) focused on Tasks 1 and 2 using attention pooling, document metadata, and multitask learning. Our final submission combined Model 3 for Tasks 1 and 2 with Model 2 for Tasks 3 and 4, outperforming the baseline on the private leaderboard",
       ],
@@ -125,7 +125,7 @@ const data = {
       title: "On the Influence of Discourse Relations in Persuasive Texts",
       venue: "The 38th Canadian Conference on Artificial Intelligence (Canadian AI 2025) · May 19, 2025",
       link: "https://caiac.pubpub.org/pub/p99aab5q/release/2", 
-      image: "/images/canai.png",
+      // image: "/images/canai.png",
       details: [
         "We explored how discourse relations relate to persuasion techniques in online texts. We used LLMs and prompt engineering to label a persuasion-annotated dataset with discourse relations from PDTB 3.0, evaluating four LLMs across ten prompts (40 classifiers total). We released five silver-standard datasets created through ensemble strategies. Our analysis revealed that relations like Cause, Purpose, and Concession are closely tied to persuasive techniques such as Loaded Language and Doubt, offering insights for misinformation detection and persuasive communication",
       ],
@@ -155,13 +155,13 @@ const data = {
     {
       name: "Co-op Mentorship Award",
       year: "2024",
-      image: "/images/coop.png",
+      image: "/images/concordia.png",
       details: ["Recognized for exceptional mentorship at Concordia."],
     },
     {
       name: "Dean’s List",
       year: "2022–2024",
-      image: "/images/deans.png",
+      image: "/images/concordia.png",
       details: ["High academic distinction for multiple years."],
     },
   ],
