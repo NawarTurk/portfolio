@@ -20,6 +20,7 @@ const data = {
       year: "Jan 2023 - Dec 2023",
       image: "/images/ross.png",
       details: [
+        "Worked in an Agile environment with CI/CD pipelines and version control (Git)",
         "Delivered new features for Quorum broadcasting software by implementing Shotbox system backend using Java/Struts2, achieving 95%+ test coverage with comprehensive JUnit/Mockito testing",
         "Represented the Quorum development team at 4 company-wide Agile sprint demos, presenting new features to 40+ cross-functional stakeholders and addressing technical questions",
         "Collaborated with development team members to streamline Quorum onboarding by creating structured documentation and training materials, reducing ramp-up time from 4 to 2 days for four new developers"
@@ -184,7 +185,9 @@ export default function App() {
         className="w-28 h-28 rounded-full mb-3 border-4 border-green-700 shadow-md object-cover object-center"
       />
         <h1 className="text-lg font-bold mb-2 text-green-900 tracking-tight">Nawar Turk</h1>
-        <p className="text-xs text-green-800 text-center mb-2">MSc Computer Science <br/> NLP Researcher</p>
+        <p className="text-xs text-green-800 text-center mb-2">
+        MSc Computer Science Candidate <br/> Software Developer & NLP Researcher
+        </p>
 
 
         <div className="flex justify-center gap-3 mt-4 mb-3">
