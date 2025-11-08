@@ -99,6 +99,15 @@ const data = {
         "Collaborated with a 4-person leadership team to support first-year student engagement during COVID-19. Grew club social media to 1,000+ followers and organized 7 online gaming events, building community connections for remote students unable to attend campus"
       ],
     },
+    {
+      org: "MultiCaf",
+      role: "Volunteer Food Distribution Coordinator",
+      year: "2020",
+      image: "/images/multicaf.png",
+      details: [
+        "Organized, packed, and distributed food for delivery to low-income households in Montreal."
+      ],
+    },    
   ],
 
   publications: [
