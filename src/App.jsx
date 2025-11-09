@@ -125,6 +125,7 @@ const data = {
     {
       title: "A Multi-Architecture Approach for Corporate Environmental Promise Verification",
       venue: "The 19th International Workshop on Semantic Evaluation (SemEval-2025) · Jul 1, 2025",
+      image: "/images/semeval_poster.png",
       link: "https://aclanthology.org/2025.semeval-1.232/",
       details: [
         "We proposed three transformer-based models for verifying ESG promises in corporate reports at SemEval-2025 Task 6. Models 1 and 2 (using ESG-BERT) handled all four subtasks, with Model 2 adding tailored features like sentiment, vague terms, and time indicators to guide the model. Model 3 (based on DeBERTa-v3) focused on Tasks 1 and 2 using attention pooling, document metadata, and multitask learning. Our final submission combined Model 3 for Tasks 1 and 2 with Model 2 for Tasks 3 and 4, outperforming the baseline on the private leaderboard",
