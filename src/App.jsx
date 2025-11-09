@@ -115,7 +115,8 @@ const data = {
       title: "Hierarchical Adapters for Cross-Framework Multi-lingual Discourse Relation Classification",
       venue: "Computational Approaches to Discourse (CODI) Workshop @ EMNLP 2025 · Sep 22, 2025",
       image: "/images/disrpt_poster.jpg",
-      link: "https://arxiv.org/abs/2509.16903",
+      arxiv: "https://arxiv.org/abs/2509.16903",
+      git: "https://github.com/CLaC-Lab/DISRPT-2025",
       details: [
         "Our paper focuses on Discourse Relation Classification, where the DISRPT organizers did a wonderful job assembling 39 corpora across 16 languages and 6 discourse frameworks, and proposed a unified set of 17 relation labels",
         "We built multilingual baselines using mBERT, XLM-RoBERTa-Base, and XLM-RoBERTa-Large for the newly proposed labels across all corpora. We then explored progressive unfreezing strategies and also evaluated prompt-based models (zero- and few-shot) using Claude Opus 4.0. Lastly, we proposed a hierarchical adapter and contrastive learning model that is efficient and aimed to outperform the baselines",
@@ -126,7 +127,9 @@ const data = {
       title: "A Multi-Architecture Approach for Corporate Environmental Promise Verification",
       venue: "The 19th International Workshop on Semantic Evaluation (SemEval-2025) · Jul 1, 2025",
       image: "/images/semeval_poster.png",
-      link: "https://aclanthology.org/2025.semeval-1.232/",
+      paper: "https://aclanthology.org/2025.semeval-1.232/",
+      arxiv: "https://arxiv.org/abs/2505.23538",
+      git: "https://github.com/CLaC-Lab/SemEval-2025-Task6",
       details: [
         "We proposed three transformer-based models for verifying ESG promises in corporate reports at SemEval-2025 Task 6. Models 1 and 2 (using ESG-BERT) handled all four subtasks, with Model 2 adding tailored features like sentiment, vague terms, and time indicators to guide the model. Model 3 (based on DeBERTa-v3) focused on Tasks 1 and 2 using attention pooling, document metadata, and multitask learning. Our final submission combined Model 3 for Tasks 1 and 2 with Model 2 for Tasks 3 and 4, outperforming the baseline on the private leaderboard",
       ],
@@ -134,7 +137,9 @@ const data = {
     {
       title: "On the Influence of Discourse Relations in Persuasive Texts",
       venue: "The 38th Canadian Conference on Artificial Intelligence (Canadian AI 2025) · May 19, 2025",
-      link: "https://caiac.pubpub.org/pub/p99aab5q/release/2",
+      paper: "https://caiac.pubpub.org/pub/p99aab5q/release/2",
+      arxiv: "https://arxiv.org/abs/2510.26124",
+      git: "https://github.com/CLaC-Lab/Persuasion-Discourse-Mapping",
       details: [
         "We explored how discourse relations relate to persuasion techniques in online texts. We used LLMs and prompt engineering to label a persuasion-annotated dataset with discourse relations from PDTB 3.0, evaluating four LLMs across ten prompts (40 classifiers total). We released five silver-standard datasets created through ensemble strategies. Our analysis revealed that relations like Cause, Purpose, and Concession are closely tied to persuasive techniques such as Loaded Language and Doubt, offering insights for misinformation detection and persuasive communication",
       ],
@@ -267,7 +272,7 @@ export default function App() {
               items={data.experience}
               expandedIndex={expandedIndex}
               toggleExpand={toggleExpand}
-              activeSection={activeSection}  
+              activeSection={activeSection}
             />
           </Section>
         )}
@@ -275,11 +280,11 @@ export default function App() {
         {activeSection === "volunteering" && (
           <Section title="Volunteering">
 
-          <CardList
+            <CardList
               items={data.volunteering}
               expandedIndex={expandedIndex}
               toggleExpand={toggleExpand}
-              activeSection={activeSection}  
+              activeSection={activeSection}
             />
           </Section>
         )}
@@ -290,19 +295,19 @@ export default function App() {
               items={data.publications}
               expandedIndex={expandedIndex}
               toggleExpand={toggleExpand}
-              activeSection={activeSection}  
+              activeSection={activeSection}
             />
           </Section>
         )}
 
         {activeSection === "awards" && (
           <Section title="Awards">
-          <CardList
-            items={data.awards}
-            expandedIndex={expandedIndex}
-            toggleExpand={toggleExpand}
-            activeSection={activeSection}  
-          />
+            <CardList
+              items={data.awards}
+              expandedIndex={expandedIndex}
+              toggleExpand={toggleExpand}
+              activeSection={activeSection}
+            />
           </Section>
         )}
         <div className="mt-10">
@@ -345,22 +350,44 @@ function CardList({ items, expandedIndex, toggleExpand, activeSection }) {
           )} */}
 
           <div className="flex-1">
-
-
-            {item.link ? (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-green-900 text-sm mb-1 underline hover:text-green-700"
-              >
-                {item.title || item.role || item.name}
-              </a>
-            ) : (
-              <p className="font-semibold text-green-900 text-sm mb-1">
-                {item.title || item.role || item.name}
-              </p>
+            <p className="font-semibold text-green-900 text-sm mb-1">
+              {item.title || item.role || item.name}
+            </p>
+            {activeSection === "publications" && (
+              <div className="flex flex-wrap gap-3 mb-1">
+                {item.paper && (
+                  <a
+                    href={item.paper}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-green-700 underline hover:text-green-900"
+                  >
+                    Paper ↗
+                  </a>
+                )}
+                {item.arxiv && (
+                  <a
+                    href={item.arxiv}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-green-700 underline hover:text-green-900"
+                  >
+                    arXiv ↗
+                  </a>
+                )}
+                {item.git && (
+                  <a
+                    href={item.git}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-green-700 underline hover:text-green-900"
+                  >
+                    GitHub ↗
+                  </a>
+                )}
+              </div>
             )}
+
 
 
             {item.org && <p className="text-xs text-green-800">{item.org}</p>}
@@ -377,7 +404,7 @@ function CardList({ items, expandedIndex, toggleExpand, activeSection }) {
                   </ul>
                 )}
 
-                {item.image && (
+                {item.image && activeSection === "publications" && (
                   <div className="flex justify-center mt-3">
                     <img
                       src={item.image}
