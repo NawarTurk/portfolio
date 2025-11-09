@@ -8,7 +8,7 @@ const data = {
       org: "Concordia University, Montreal, QC",
       year: "Sep 2024 - Present",
       image: "/images/concordia.png",
-      details:[
+      details: [
         "Collaborated with the research team on NLP projects, designing and evaluating model architectures, presented findings at 2 international conferences (Canadian AI 2025, SemEval 2025), engaging with 100+ researchers",
         "Supporting 80+ students in Object-Oriented Programming and AI courses by leading labs and tutorials, explaining complex concepts, designing additional quizzes and practice sets on GitHub, and assisting via Slack",
         "Mentoring an undergraduate student toward their first publication, guiding model and research development"
@@ -48,8 +48,8 @@ const data = {
         "Ambassador: Served as an Ambassador for the Arbour Foundation, leading outreach and support for scholarship applicants.",
         "Organizer: Helped organize the “AI & Energy Transition” event with IVADO, and supported the 2025–2026 selection process by coordinating candidate reception and interview flow.",
         "Community Builder: Founded and managed a LinkedIn group for Arbour Scholars to connect, share opportunities, and build a sense of community."
-       ],
-    
+      ],
+
     },
     {
       org: "Santropol Roulant",
@@ -107,15 +107,15 @@ const data = {
       details: [
         "Organized, packed, and distributed food for delivery to low-income households in Montreal."
       ],
-    },    
+    },
   ],
 
   publications: [
     {
       title: "Hierarchical Adapters for Cross-Framework Multi-lingual Discourse Relation Classification",
       venue: "Computational Approaches to Discourse (CODI) Workshop @ EMNLP 2025 · Sep 22, 2025",
-      link: "https://arxiv.org/abs/2509.16903", 
-      // image: "/images/hidac.png",
+      image: "/images/disrpt_poster.jpg",
+      link: "https://arxiv.org/abs/2509.16903",
       details: [
         "Our paper focuses on Discourse Relation Classification, where the DISRPT organizers did a wonderful job assembling 39 corpora across 16 languages and 6 discourse frameworks, and proposed a unified set of 17 relation labels",
         "We built multilingual baselines using mBERT, XLM-RoBERTa-Base, and XLM-RoBERTa-Large for the newly proposed labels across all corpora. We then explored progressive unfreezing strategies and also evaluated prompt-based models (zero- and few-shot) using Claude Opus 4.0. Lastly, we proposed a hierarchical adapter and contrastive learning model that is efficient and aimed to outperform the baselines",
@@ -125,8 +125,7 @@ const data = {
     {
       title: "A Multi-Architecture Approach for Corporate Environmental Promise Verification",
       venue: "The 19th International Workshop on Semantic Evaluation (SemEval-2025) · Jul 1, 2025",
-      link: "https://aclanthology.org/2025.semeval-1.232/", 
-      // image: "/images/semeval.png",
+      link: "https://aclanthology.org/2025.semeval-1.232/",
       details: [
         "We proposed three transformer-based models for verifying ESG promises in corporate reports at SemEval-2025 Task 6. Models 1 and 2 (using ESG-BERT) handled all four subtasks, with Model 2 adding tailored features like sentiment, vague terms, and time indicators to guide the model. Model 3 (based on DeBERTa-v3) focused on Tasks 1 and 2 using attention pooling, document metadata, and multitask learning. Our final submission combined Model 3 for Tasks 1 and 2 with Model 2 for Tasks 3 and 4, outperforming the baseline on the private leaderboard",
       ],
@@ -134,8 +133,7 @@ const data = {
     {
       title: "On the Influence of Discourse Relations in Persuasive Texts",
       venue: "The 38th Canadian Conference on Artificial Intelligence (Canadian AI 2025) · May 19, 2025",
-      link: "https://caiac.pubpub.org/pub/p99aab5q/release/2", 
-      // image: "/images/canai.png",
+      link: "https://caiac.pubpub.org/pub/p99aab5q/release/2",
       details: [
         "We explored how discourse relations relate to persuasion techniques in online texts. We used LLMs and prompt engineering to label a persuasion-annotated dataset with discourse relations from PDTB 3.0, evaluating four LLMs across ten prompts (40 classifiers total). We released five silver-standard datasets created through ensemble strategies. Our analysis revealed that relations like Cause, Purpose, and Concession are closely tied to persuasive techniques such as Loaded Language and Doubt, offering insights for misinformation detection and persuasive communication",
       ],
@@ -153,7 +151,7 @@ const data = {
       name: "Fondation Arbour Scholarship, $40,000",
       year: "2024–2025",
       image: "/images/arbour.png",
-      details: ["2024, sole Concordia recipient; renewed 2025", 
+      details: ["2024, sole Concordia recipient; renewed 2025",
         "provincial, merit-based; assessed on leadership skills, contributing to the community, research record and potential"],
     },
     {
@@ -188,14 +186,14 @@ export default function App() {
   return (
     <div className="min-h-screen flex bg-[url('images/grass-sky.png')] bg-repeat bg-[length:64px_64px] text-gray-800 font-mono">
       <aside className="w-72 bg-green-200/90 border-r-4 border-green-600 p-5 flex flex-col items-center shadow-inner">
-      <img
-        src="images/profile.png"
-        alt="Personal profile"
-        className="w-28 h-28 rounded-full mb-3 border-4 border-green-700 shadow-md object-cover object-center"
-      />
+        <img
+          src="images/profile.png"
+          alt="Personal profile"
+          className="w-28 h-28 rounded-full mb-3 border-4 border-green-700 shadow-md object-cover object-center"
+        />
         <h1 className="text-lg font-bold mb-2 text-green-900 tracking-tight">Nawar Turk</h1>
         <p className="text-xs text-green-800 text-center mb-2">
-        MSc Computer Science Candidate <br/> Software Developer & NLP Researcher
+          MSc Computer Science Candidate <br /> Software Developer & NLP Researcher
         </p>
 
 
@@ -239,7 +237,7 @@ export default function App() {
 
 
 
-      <nav className="w-full space-y-2 mt-6">
+        <nav className="w-full space-y-2 mt-6">
           {Object.keys(data).map((key) => (
             <button
               key={key}
@@ -247,11 +245,10 @@ export default function App() {
                 setActiveSection(key);
                 setExpandedIndex(null);
               }}
-              className={`block w-full text-left px-3 py-2 rounded-md text-xs font-semibold transition-colors duration-150 border-2 border-green-700 shadow-sm ${
-                activeSection === key
-                  ? "bg-green-600 text-white"
-                  : "hover:bg-green-500 hover:text-white text-green-900 bg-green-100"
-              }`}
+              className={`block w-full text-left px-3 py-2 rounded-md text-xs font-semibold transition-colors duration-150 border-2 border-green-700 shadow-sm ${activeSection === key
+                ? "bg-green-600 text-white"
+                : "hover:bg-green-500 hover:text-white text-green-900 bg-green-100"
+                }`}
             >
               ▶ {key.charAt(0).toUpperCase() + key.slice(1)}
             </button>
@@ -264,30 +261,52 @@ export default function App() {
       <main className="flex-1 p-10 bg-[url('/images/grass-sky.jpg')] bg-no-repeat bg-cover bg-center bg-[length:80px_80px]">
         {activeSection === "experience" && (
           <Section title="Work Experience">
-            <CardList items={data.experience} expandedIndex={expandedIndex} toggleExpand={toggleExpand} />
+
+            <CardList
+              items={data.experience}
+              expandedIndex={expandedIndex}
+              toggleExpand={toggleExpand}
+              activeSection={activeSection}  
+            />
           </Section>
         )}
 
         {activeSection === "volunteering" && (
           <Section title="Volunteering">
-            <CardList items={data.volunteering} expandedIndex={expandedIndex} toggleExpand={toggleExpand} />
+
+          <CardList
+              items={data.volunteering}
+              expandedIndex={expandedIndex}
+              toggleExpand={toggleExpand}
+              activeSection={activeSection}  
+            />
           </Section>
         )}
 
         {activeSection === "publications" && (
           <Section title="Publications">
-            <CardList items={data.publications} expandedIndex={expandedIndex} toggleExpand={toggleExpand} />
+            <CardList
+              items={data.publications}
+              expandedIndex={expandedIndex}
+              toggleExpand={toggleExpand}
+              activeSection={activeSection}  
+            />
           </Section>
         )}
 
         {activeSection === "awards" && (
           <Section title="Awards">
-            <CardList items={data.awards} expandedIndex={expandedIndex} toggleExpand={toggleExpand} />
+          <CardList
+            items={data.awards}
+            expandedIndex={expandedIndex}
+            toggleExpand={toggleExpand}
+            activeSection={activeSection}  
+          />
           </Section>
         )}
-          <div className="mt-10">
-            <MiniGame />
-          </div>
+        <div className="mt-10">
+          <MiniGame />
+        </div>
       </main>
     </div>
   );
@@ -302,7 +321,7 @@ function Section({ title, children }) {
   );
 }
 
-function CardList({ items, expandedIndex, toggleExpand }) {
+function CardList({ items, expandedIndex, toggleExpand, activeSection }) {
   return (
     <div className="flex flex-col gap-4">
       {items.map((item, i) => (
@@ -311,14 +330,21 @@ function CardList({ items, expandedIndex, toggleExpand }) {
           onClick={() => toggleExpand(i)}
           className="bg-green-100/90 border-2 border-green-700 rounded-xl p-4 hover:bg-green-200 transition-all cursor-pointer flex items-start gap-3 shadow-[2px_2px_0_#2f855a] backdrop-blur-sm"
         >
-          {item.image && (
-            <img src={item.image} alt={item.role || item.title || item.name} className="w-16 h-16 object-cover rounded-md border-2 border-green-700" />
+
+          {item.image && activeSection !== "publications" && (
+            <img
+              src={item.image}
+              alt={item.role || item.title || item.name}
+              className="w-16 h-16 object-cover rounded-md border-2 border-green-700"
+            />
           )}
+
+          {/* {item.image && (
+            <img src={item.image} alt={item.role || item.title || item.name} className="w-16 h-16 object-cover rounded-md border-2 border-green-700" />
+          )} */}
+
           <div className="flex-1">
-{/*             
-            <p className="font-semibold text-green-900 text-sm mb-1">
-              {item.role || item.title || item.name}
-            </p> */}
+
 
             {item.link ? (
               <a
@@ -336,18 +362,32 @@ function CardList({ items, expandedIndex, toggleExpand }) {
             )}
 
 
-          {item.org && <p className="text-xs text-green-800">{item.org}</p>}
-          {item.venue && <p className="text-xs text-green-800 italic">{item.venue}</p>}
-          {item.year && <p className="text-[10px] text-green-700">{item.year}</p>}
+            {item.org && <p className="text-xs text-green-800">{item.org}</p>}
+            {item.venue && <p className="text-xs text-green-800 italic">{item.venue}</p>}
+            {item.year && <p className="text-[10px] text-green-700">{item.year}</p>}
 
+            {expandedIndex === i && (
+              <div className="mt-2 text-green-900 text-[11px] space-y-2">
+                {item.details && (
+                  <ul className="list-disc list-inside">
+                    {item.details.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                )}
 
-            {expandedIndex === i && item.details && (
-              <ul className="mt-2 text-[11px] text-green-900 list-disc list-inside">
-                {item.details.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
+                {item.image && (
+                  <div className="flex justify-center mt-3">
+                    <img
+                      src={item.image}
+                      alt={`${item.title} poster`}
+                      className="rounded-lg border-2 border-green-700 w-full max-w-md shadow-md"
+                    />
+                  </div>
+                )}
+              </div>
             )}
+
             <div className="text-right text-[10px] text-green-700 mt-2">
               {expandedIndex === i ? "▲ Close" : "▼ Expand"}
             </div>
